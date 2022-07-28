@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/pokemon', (req, res) => {
-    res.send(pokemon);
+    res.render('Index', {pokemon: pokemon});
 });
 
 // My port
