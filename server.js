@@ -14,8 +14,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/pokemon', (req, res) => {
+   let firstLetterCap = pokemon.map(item => item.charAt(0).toUpperCase() + item.substr(1).toLowerCase());
     res.render('Index', {pokemon: pokemon});
-});
+});  
 
 // My port
 app.listen(port,() => {
