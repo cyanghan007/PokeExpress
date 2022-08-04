@@ -34,6 +34,10 @@ app.get('/pokemon/new', (req, res) => {
 });
 
 app.post('/pokemon/', (req, res) => {
+    let name = req.body.name.split('');
+    name[0] = name[0].toUpperCase()
+    req.body.name = name.join('')
+
     Pokemon.create(req.body, (err, createdPokemon) => {
         res.redirect('/pokemon');
     });
