@@ -1,16 +1,16 @@
 // calling in mongoose databse with require
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 // format for pokemon data
 const pokemonSchema = new mongoose.Schema({
     name: { type: String, required: true },
     img: { type: String, required: true },
-});
+})
 
-const Pokemon = mongoose.model('Pokemon', pokemonSchema);
+const Pokemon = mongoose.model('Pokemon', pokemonSchema)
 
 // exporting out pokemon.js file into server.js
-module.exports = Pokemon;
+module.exports = Pokemon
 
 
 // const pokemon = [

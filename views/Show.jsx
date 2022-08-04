@@ -1,9 +1,9 @@
-const React = require('react');
+const React = require('react')
 
 const myStyle = {
   color: '##ffcc00',
   backgroundColor: '#d9d9d9',
-};
+}
 
 const myStyle2 = {
   display: "flex",
@@ -20,7 +20,7 @@ const button = {
 }
     class Show extends React.Component {
       render() {
-        const pokemon = this.props.pokemon;
+        const pokemon = this.props.pokemon
           return (
                   <div style = {{...myStyle,...myStyle2}}>
                       <h1> "Gotta Catch 'Em All" </h1>
@@ -32,9 +32,9 @@ const button = {
                         <button>Back</button>
                       </a>  
                   </div>
-          );
+          )
       }
     }
 
-module.exports = Show;
+module.exports = Show
 

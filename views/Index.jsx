@@ -1,10 +1,10 @@
-const React = require('react');
-const pokemon = require('../models/pokemon');
+const React = require('react')
+const pokemon = require('../models/pokemon')
 const myStyle = {
   color: '#ffcc00',
   backgroundColor: '#991f00',
   fontSize: '1.3em',
-};
+}
 
 const myStyle2 = {
   display: "flex",
@@ -17,7 +17,7 @@ const myStyle2 = {
 
     class Index extends React.Component {
       render() {
-        const { pokemon } = this.props;
+        const { pokemon } = this.props
           return (
             <div style = {{...myStyle,...myStyle2}}> 
                 <h1>See All The Pokemon</h1>
@@ -27,9 +27,12 @@ const myStyle2 = {
                         <li>
                           <a href={`/pokemon/${pokemon.id}`}>
                             {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+                            <form action={`/pokemon/${pokemon.id}?_method=DELETE`} method='POST'><button type="submit">Delete</button>
+                            </form>
+                            <a href={`/pokemon/${pokemon.id}/edit`}>Edit pokemon</a>
                           </a>
                         </li>
-                    );
+                    )
                   })}
                   </ul>
                   <nav>
@@ -39,9 +42,9 @@ const myStyle2 = {
                   </nav>  
             </div>    
             
-          );
+          )
       }
     }
 
-    module.exports = Index;
+    module.exports = Index
 

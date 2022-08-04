@@ -1,10 +1,10 @@
-const React = require('react');
+const React = require('react')
 
 const myStyle = {
   color: '#ffcc00',
   backgroundColor: '#0066cc',
   fontSize: '1.3em',
-};
+}
 
 const myStyle2 = {
   display: "flex",
@@ -29,8 +29,8 @@ class New extends React.Component {
                   <br/>
                   <img src="https://i.imgur.com/jQCyhH0.gif"></img>
                 </form>
-            </div>);
+            </div>)
         }
       }
  
-module.exports = New;
+module.exports = New
