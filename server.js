@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose');
 require('dotenv').config();
-const Pokemon = require('./models/Pokemon');
+const Pokemon = require('./models/pokemon');
 const app = express();
 const port = process.env.PORT || 3003;
 
